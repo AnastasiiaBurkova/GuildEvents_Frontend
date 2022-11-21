@@ -23,7 +23,7 @@ const Home = () => {
       const endDateTimeQuery = `endDateTimeFrame=${getNext4MonthsEvents()}`;
       await Promise.all([
        (
-         await fetch(`https://apim-whatsthehaps.azure-api.net/v1/events?${guildQuery}&${startDateTimeQuery}&${endDateTimeQuery}`, {
+         await fetch(`https://apim-whatsthehaps-neu.azure-api.net/v1/events?${guildQuery}&${startDateTimeQuery}&${endDateTimeQuery}`, {
           method: 'GET',
           headers: {'Content-type': 'application/json; charset=UTF-8'},
         }).then((res) => res.json())
