@@ -20,6 +20,10 @@ h1{
     overflow: hidden;
     align-items: center;
   }
+
+  .mainLogo {
+    padding-top: 32px;
+  }
   
   /* Dropdown button */
   .dropdown .dropbtn {

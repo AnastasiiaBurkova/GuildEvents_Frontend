@@ -6,6 +6,7 @@ NavBtn,
 NavBtnLink,
 } from './NavBar';
 import './NavStyles.css'
+import logo from "../../images/main-logo.png";
 
 const Navbar = () => {
 	
@@ -13,7 +14,9 @@ const Navbar = () => {
 		<>
 		<Nav>
 				<NavLink to='/' >
-					<h1>WhatsTheHaps?</h1>
+					<div className='mainLogo'>
+					<img src={logo}></img>
+					</div>
 				</NavLink>
 				<div className='viewButtons'> 
 				<NavBtn >
