@@ -18,10 +18,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' exact element={<Home />} />
-        <Route path='/week' element={<Week />} />
-        <Route path='/month' element={<Month />}/> 
-        <Route path='/about' element={<About />} />
-        <Route path='/terms' element={<Terms />}/> 
+        <Route path='/week' exact element={<Week />} />
+        <Route path='/month' exact element={<Month />}/> 
+        <Route path='/about' exact element={<About />} />
+        <Route path='/terms' exact element={<Terms />}/> 
       </Routes>
     </Router>
 
