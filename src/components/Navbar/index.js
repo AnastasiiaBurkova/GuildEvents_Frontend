@@ -15,7 +15,7 @@ const Navbar = () => {
 		<Nav>
 				<NavLink to='/' >
 					<div className='mainLogo'>
-					<img src={logo}></img>
+					<img src={logo} alt="logo"></img>
 					</div>
 				</NavLink>
 				<div className='viewButtons'> 

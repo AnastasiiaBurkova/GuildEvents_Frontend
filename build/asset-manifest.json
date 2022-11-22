@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d5356d0b.css",
-    "main.js": "/static/js/main.6f1282fc.js",
+    "main.js": "/static/js/main.a7a8e0c2.js",
     "static/js/787.dd6ac539.chunk.js": "/static/js/787.dd6ac539.chunk.js",
     "static/media/IK_logo.png": "/static/media/IK_logo.683cda5e16ffee940eb1.png",
     "static/media/inkulogo-musta.png": "/static/media/inkulogo-musta.a54e6a4a18fc5e4216b6.png",
@@ -17,11 +17,11 @@
     "static/media/as-black.jpg": "/static/media/as-black.89e1c543be80eadf1366.jpg",
     "index.html": "/index.html",
     "main.d5356d0b.css.map": "/static/css/main.d5356d0b.css.map",
-    "main.6f1282fc.js.map": "/static/js/main.6f1282fc.js.map",
+    "main.a7a8e0c2.js.map": "/static/js/main.a7a8e0c2.js.map",
     "787.dd6ac539.chunk.js.map": "/static/js/787.dd6ac539.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d5356d0b.css",
-    "static/js/main.6f1282fc.js"
+    "static/js/main.a7a8e0c2.js"
   ]
 }
