@@ -88,10 +88,19 @@ return (
         eventClick={(e) => {
           Swal.fire({
             title: e.event.title,
-            html:"<br>Description: " + JSON.stringify(e.event.extendedProps.description) + "<br>"+ 
-            "<br> Location: " + e.event.extendedProps.location + "<br>"+
-            "<br>Organizer: " + e.event.extendedProps.guild
-        }) 
+            html:
+              "Starting from: " +
+              e.event.start +
+              "<br>" +
+              "<br>Description: " +
+              e.event.extendedProps.description +
+              "<br>" +
+              "<br> Location: " +
+              e.event.extendedProps.location +
+              "<br>" +
+              "<br>Organizer: " +
+              e.event.extendedProps.guild,
+          });
           
         }}
         timeZone="Europe/Helsinki"
