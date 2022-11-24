@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.28e5ef7d.css",
+    "main.css": "/static/css/main.78801455.css",
     "main.js": "/static/js/main.d07244bc.js",
     "static/js/787.dd6ac539.chunk.js": "/static/js/787.dd6ac539.chunk.js",
     "static/media/Noora_Anastasiia.jpeg": "/static/media/Noora_Anastasiia.dd216cd7b2bde264c6bb.jpeg",
@@ -18,12 +18,12 @@
     "static/media/main-logo.png": "/static/media/main-logo.31ad1edb2f66005c7a99.png",
     "static/media/as-black.jpg": "/static/media/as-black.89e1c543be80eadf1366.jpg",
     "index.html": "/index.html",
-    "main.28e5ef7d.css.map": "/static/css/main.28e5ef7d.css.map",
+    "main.78801455.css.map": "/static/css/main.78801455.css.map",
     "main.d07244bc.js.map": "/static/js/main.d07244bc.js.map",
     "787.dd6ac539.chunk.js.map": "/static/js/787.dd6ac539.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28e5ef7d.css",
+    "static/css/main.78801455.css",
     "static/js/main.d07244bc.js"
   ]
 }
