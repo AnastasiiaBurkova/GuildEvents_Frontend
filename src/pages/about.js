@@ -1,6 +1,7 @@
 import React from 'react';
 import './pages.css';
 import logo from "../images/logo_green.png";
+import logoMobile from "../images/logo_green_mobile.png";
 import us from "../images/Noora_Anastasiia.jpeg"
 
 const About = () => {
@@ -18,7 +19,8 @@ return (
                 <br/>
                 <br/>
                 So we came up with <div className='mainLogo'>
-					<img className='logo' src={logo} alt="logo"></img>
+					<img src={logoMobile} alt="logo" class="mobile"></img>
+					<img src={logo} alt="logo" class="desktop"></img>
 					</div>
                 <br/>
                 

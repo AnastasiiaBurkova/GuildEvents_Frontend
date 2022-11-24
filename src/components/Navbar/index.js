@@ -7,6 +7,7 @@ NavBtnLink,
 } from './NavBar';
 import './NavStyles.css'
 import logo from "../../images/main-logo.png";
+import logoMobile from "../../images/main-logo-mobile.png";
 
 const Navbar = () => {
 	
@@ -15,7 +16,8 @@ const Navbar = () => {
 		<Nav>
 				<NavLink to='/' >
 					<div className='mainLogo'>
-					<img src={logo} alt="logo"></img>
+					<img src={logoMobile} alt="logo" class="mobile"></img>
+					<img src={logo} alt="logo" class="desktop"></img>
 					</div>
 				</NavLink>
 				<div className='viewButtons'> 

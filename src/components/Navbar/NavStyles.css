@@ -92,6 +92,42 @@ h1{
     align-items: center;
   }
 
+  /* hide mobile version by default */
+  .mainLogo .mobile {
+    display: none;
+  }
+  /* when screen is less than 600px wide
+     show mobile version and hide desktop */
+  @media (max-width: 600px) {
+    .mainLogo .mobile {
+      display: block;
+    }
+    .mainLogo .desktop {
+      display: none;
+    }
+
+    .viewButtons{
+      display: flex;
+      align-items: center;
+      margin:auto;
+      position: absolute;
+      left: 43%;
+      transform: translate(-50%);
+      margin-top: 10px;
+  }
+
+  .jvfkLz {
+    display: flex;
+    width: 32px;
+    align-content: center;
+    font-size: small;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 14px;
+  }
+  }
+
   .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);

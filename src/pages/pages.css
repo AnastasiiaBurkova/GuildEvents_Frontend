@@ -35,3 +35,70 @@
     height: 420px;
 }
 
+@media (max-width: 600px) {
+    .picture{
+        width:191px;
+        height: 318px;
+    }
+
+    .swal2-container.swal2-center>.swal2-popup {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: center;
+        justify-self: center;
+        width: 250px !important;
+    }
+
+    .fc fc-media-screen .fc-direction-ltr .fc-theme-standard {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        overflow: scroll;
+        width: 100%;
+        min-width: 354px;
+        height: 750px !important;
+    }
+
+    .fc-timegrid-event-harness {
+        width: 60px;
+        height: 75px;
+      
+    }
+
+    .fc .fc-toolbar.fc-header-toolbar {
+        margin-bottom: 1.5em;
+        font-size: x-small;
+    }
+
+    .fc .fc-view-harness {
+        flex-grow: 1;
+        position: relative;
+        font-size: x-small;
+    }
+
+    .container > div {
+        max-width: 32%;
+        height: 750px;
+        min-width: 360px;
+    }
+
+    .fc-v-event .fc-event-title {
+        top: 0;
+        bottom: 0;
+        max-height: 100%;
+        overflow: hidden;
+        font-size: x-small;
+    }
+
+    .fc-daygrid-dot-event .fc-event-title {
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 0;
+        overflow: hidden;
+        font-weight: bold;
+        font-size: x-small;
+    }
+
+    
+  }
+
