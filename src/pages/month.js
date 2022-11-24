@@ -77,7 +77,6 @@ const Month = () => {
 
   React.useEffect(() => {
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function getNext3MonthsEvents() {
