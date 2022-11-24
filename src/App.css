@@ -289,4 +289,25 @@ button{
   margin-right:5px !important;
   border-radius: 4px !important;
 }
+.basic-multi-select{
+  width:98.5%;
+  margin: auto;
+}
+
+.select__option:hover{
+  background-color: #30BF98 !important;
+}
+.select__control{
+  opacity: 0.8;
+}
+
+.css-1rhbuit-multiValue{
+  background-color: #30BF98 !important;
+}
+.fc-event-main-frame{
+  text-shadow: 1px 1px black;
+}
+.fc-event{
+  opacity: 1 !important;
+}
 

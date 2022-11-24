@@ -4,7 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import Select from "react-select";
 
 const Month = () => {
@@ -156,21 +156,24 @@ const Month = () => {
         fixedWeekCount={false}
         eventOverlap={false}
         events={filtered}
-        height={"auto"}
+        height={"fixed"}
         eventDisplay={"list-item"}
         dayMaxEvents={3}
         nowIndicator={true}
         eventClick={(e) => {
-          swal({
+          Swal.fire({
             title: e.event.title,
-            text:
+            html:
               "Starting from: " +
               e.event.start +
-              "\n Description: " +
+              "<br>" +
+              "<br>Description: " +
               e.event.extendedProps.description +
-              "\n Location: " +
+              "<br>" +
+              "<br> Location: " +
               e.event.extendedProps.location +
-              "\n Organizer: " +
+              "<br>" +
+              "<br>Organizer: " +
               e.event.extendedProps.guild,
           });
         }}
