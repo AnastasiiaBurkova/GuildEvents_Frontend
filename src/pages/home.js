@@ -29,7 +29,8 @@ const Home = () => {
         }).then((res) => res.json())
         .then((data) => {
           var dataString = JSON.stringify(data.response);
-          var result = JSON.parse(dataString);   
+          var result = JSON.parse(dataString); 
+
           setResponse(result);
         }))
      ]);
@@ -84,9 +85,10 @@ return (
         eventClick={(e) => {
           Swal.fire({
             title: e.event.title,
-            html:"<br>Description: " + e.event.extendedProps.description + "<br>"+ 
-            "<br> Location: " + e.event.extendedProps.location + "<br>"+
-            "<br>Organizer: " + e.event.extendedProps.guild
+            html:"Starting from: " + e.event.start +
+            "<br>Description: <span style='white-space: pre-line'>" + e.event.extendedProps.description?.replaceAll("** ", "</b> ")?.replaceAll("**", " <b>") + "</span> \n"+ 
+            "<br>Location: " + e.event.extendedProps.location + "</br>"+
+            "Organizer: " + e.event.extendedProps.guild
         }) 
           
         }}

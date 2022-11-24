@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.28e5ef7d.css",
-    "main.js": "/static/js/main.4f495049.js",
+    "main.js": "/static/js/main.d07244bc.js",
     "static/js/787.dd6ac539.chunk.js": "/static/js/787.dd6ac539.chunk.js",
     "static/media/Noora_Anastasiia.jpeg": "/static/media/Noora_Anastasiia.dd216cd7b2bde264c6bb.jpeg",
     "static/media/IK_logo.png": "/static/media/IK_logo.683cda5e16ffee940eb1.png",
@@ -19,11 +19,11 @@
     "static/media/as-black.jpg": "/static/media/as-black.89e1c543be80eadf1366.jpg",
     "index.html": "/index.html",
     "main.28e5ef7d.css.map": "/static/css/main.28e5ef7d.css.map",
-    "main.4f495049.js.map": "/static/js/main.4f495049.js.map",
+    "main.d07244bc.js.map": "/static/js/main.d07244bc.js.map",
     "787.dd6ac539.chunk.js.map": "/static/js/787.dd6ac539.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28e5ef7d.css",
-    "static/js/main.4f495049.js"
+    "static/js/main.d07244bc.js"
   ]
 }

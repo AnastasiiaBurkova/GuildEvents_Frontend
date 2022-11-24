@@ -4,7 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import Select from "react-select";
 
 const Month = () => {
@@ -161,18 +161,13 @@ const Month = () => {
         dayMaxEvents={3}
         nowIndicator={true}
         eventClick={(e) => {
-          swal({
+          Swal.fire({
             title: e.event.title,
-            text:
-              "Starting from: " +
-              e.event.start +
-              "\n Description: " +
-              e.event.extendedProps.description +
-              "\n Location: " +
-              e.event.extendedProps.location +
-              "\n Organizer: " +
-              e.event.extendedProps.guild,
-          });
+            html:"Starting from: " + e.event.start +
+            "<br>Description: <span style='white-space: pre-line'>" + e.event.extendedProps.description?.replaceAll("** ", "</b> ")?.replaceAll("**", " <b>") + "</span> \n"+ 
+            "<br>Location: " + e.event.extendedProps.location + "</br>"+
+            "Organizer: " + e.event.extendedProps.guild
+        });
         }}
         timeZone="Europe/Helsinki"
       />

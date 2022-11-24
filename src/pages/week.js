@@ -162,19 +162,11 @@ const Week = () => {
         eventClick={(e) => {
           Swal.fire({
             title: e.event.title,
-            html:
-              "Starting from: " +
-              e.event.start +
-              "<br>" +
-              "<br>Description: " +
-              e.event.extendedProps.description +
-              "<br>" +
-              "<br> Location: " +
-              e.event.extendedProps.location +
-              "<br>" +
-              "<br>Organizer: " +
-              e.event.extendedProps.guild,
-          });
+            html:"Starting from: " + e.event.start +
+            "<br>Description: <span style='white-space: pre-line'>" + e.event.extendedProps.description?.replaceAll("** ", "</b> ")?.replaceAll("**", " <b>") + "</span> \n"+ 
+            "<br>Location: " + e.event.extendedProps.location + "</br>"+
+            "Organizer: " + e.event.extendedProps.guild
+        });
         }}
         timeZone="Europe/Helsinki"
       />
