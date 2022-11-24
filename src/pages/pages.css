@@ -73,7 +73,7 @@
     .fc .fc-view-harness {
         flex-grow: 1;
         position: relative;
-        font-size: x-small;
+        font-size: x-small !important;
     }
 
     .container > div {
@@ -87,7 +87,7 @@
         bottom: 0;
         max-height: 100%;
         overflow: hidden;
-        font-size: x-small;
+        font-size: x-small !important;
     }
 
     .fc-daygrid-dot-event .fc-event-title {
@@ -96,6 +96,16 @@
         min-width: 0;
         overflow: hidden;
         font-weight: bold;
+        font-size: x-small !important;
+    }
+
+    .fc-h-event .fc-event-title {
+        display: inline-block;
+        left: 0;
+        max-width: 100%;
+        overflow: hidden;
+        right: 0;
+        vertical-align: top;
         font-size: x-small;
     }
 
