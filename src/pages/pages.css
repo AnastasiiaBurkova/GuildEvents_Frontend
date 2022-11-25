@@ -109,6 +109,12 @@
         font-size: x-small;
     }
 
+    .selectDiv {
+        max-width: 60%;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
   }
 

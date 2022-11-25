@@ -9,18 +9,12 @@
   background-position: absolute;
   background-attachment: fixed;
 }
-body {
-  background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E ) !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100%;
-}
 
 html,
 body {
   background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E ) !important;
-  height: 100%;
-  width: 100%;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
 }
 
 .App-logo {

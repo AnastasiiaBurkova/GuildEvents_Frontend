@@ -122,7 +122,10 @@ const Week = () => {
 
   return (
     <div className="container2">
+      <div className="selectDiv">
       <Select
+        menuPlacement="auto"
+        menuPosition="fixed"
         defaultValue={[guildOptions[guildOptions.length]]}
         isMulti
         name="colors"
@@ -131,6 +134,7 @@ const Week = () => {
         classNamePrefix="select"
         onChange={handleChange}
       />
+      </div>
       <FullCalendar
         headerToolbar={{ start: "title", end: "today prev,next" }}
         plugins={[
