@@ -63,7 +63,7 @@ h1{
  
 }
 
-.container2 {
+.container2 , .container3{
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
@@ -314,4 +314,7 @@ button{
 .fc-event{
   opacity: 1 !important;
 }
+
+
+
 

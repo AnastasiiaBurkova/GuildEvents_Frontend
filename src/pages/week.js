@@ -126,7 +126,6 @@ const Week = () => {
       <Select
         menuPlacement="auto"
         menuPosition="fixed"
-        defaultValue={[guildOptions[guildOptions.length]]}
         isMulti
         name="colors"
         options={guildOptions}
@@ -158,7 +157,7 @@ const Week = () => {
           end: setToMonday(new Date(getNext4MonthsEvents())).toISOString(),
         }}
         eventOverlap={false}
-
+        contentHeight={"auto"}
         dayHeaderClassNames={"weekDay"}
         events={filtered}
         eventDisplay={"block"}

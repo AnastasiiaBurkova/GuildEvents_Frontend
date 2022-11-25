@@ -1,7 +1,6 @@
 import React from 'react';
 import './pages.css';
 import logo from "../images/logo_green.png";
-import logoMobile from "../images/logo_green_mobile.png";
 import us from "../images/Noora_Anastasiia.jpeg"
 
 const About = () => {
@@ -19,8 +18,7 @@ return (
                 <br/>
                 <br/>
                 So we came up with <div className='mainLogo'>
-					<img src={logoMobile} alt="logo" class="mobile"></img>
-					<img src={logo} alt="logo" class="desktop"></img>
+					<img src={logo} alt="logo"></img>
 					</div>
                 <br/>
                 
@@ -33,27 +31,18 @@ return (
                 signing up for events, thus offering students a better-quality student life at Aalto University.
         </div>
         <h3>About the creators</h3>
-        <table className='multiline'>
-                <tr>
-                <th>Noora</th>
-                <th>Anastasiia</th>
-                
-                </tr>
-                <tr>
-                <td>Noora is a 2nd year MSc student, studying 
-                        Software and Service engineering
-                </td>
-                <td>Anastasiia is a 2nd year MSc student, studying 
-                        Software and Service engineering</td>
-                </tr>
-                <tr>
-                <td>TIK</td>
-                <td>TIK</td>
-                </tr>
-        </table>
+        <div className="multiline">
+                Hi there! We are Noora and Anastasiia. Nice to meet you! Both of us are 2nd year MSc student, studying 
+                Software and Service engineering, TIK. Hope you'll enjoy this website.
+        </div>
+        <br/>
         <div >
 		<img className="picture" src={us} alt="Noora and Anastasiia"></img>
 	</div>
+        <div className="multiline sik">
+                P.S. If you are an Electrical Engineering Student (SIK), we are sorry, there are no events of your guild for you here!
+                You still wanna see your events? Ask your guild officials to finally make the google calendar. You are the only guild without one :(
+        </div>
 	</div>
 );
 };

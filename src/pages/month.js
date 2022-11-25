@@ -130,8 +130,11 @@ const Month = () => {
   };
 
   return (
-    <div className="container2">
+    <div className="container3">
+      <div className="selectDiv">
       <Select
+        menuPlacement="auto"
+        menuPosition="fixed"
         isMulti
         name="colors"
         options={guildOptions}
@@ -139,6 +142,7 @@ const Month = () => {
         classNamePrefix="select"
         onChange={handleChange}
       />
+      </div>
       <FullCalendar
         plugins={[
           dayGridPlugin,
@@ -147,7 +151,7 @@ const Month = () => {
           momentTimezonePlugin,
         ]}
         initialView="dayGridMonth"
-        eventTimeFormat={{ hour: "2-digit", minute: "2-digit", hour12: false }}
+        displayEventTime={false}
         firstDay={1}
         validRange={{
           start: setTo1DayOfMonth(),
@@ -156,9 +160,9 @@ const Month = () => {
         fixedWeekCount={false}
         eventOverlap={false}
         events={filtered}
-        height={"fixed"}
-        eventDisplay={"list-item"}
-        dayMaxEvents={3}
+        height={"auto"}
+        eventDisplay={"block"}
+        dayMaxEvents={4}
         nowIndicator={true}
         eventClick={(e) => {
           Swal.fire({

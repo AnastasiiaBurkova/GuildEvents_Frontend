@@ -2,25 +2,16 @@
 .fc-daygrid-event{
     cursor: pointer;
 }
-.aboutDiv{
+.aboutDiv, .termsDiv{
     background-color: white;
-    border-radius: 5%;
+    border-radius: 10px;
     margin-top: 3%;
     width: 50%;
     margin-right: auto;
     margin-left: auto;
     padding: 10px;
     opacity: 0.8;
-}
-.termsDiv{
-    background-color: white;
-    border-radius: 5%;
-    width: 50%;
-    margin-top: 3%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px;
-    opacity: 0.8; 
+    margin-bottom: 20px;
 }
 
 .multiline{
@@ -35,10 +26,30 @@
     height: 420px;
 }
 
+.sik {
+    font-size: small;
+}
+
+
 @media (max-width: 600px) {
+    .aboutDiv, .termsDiv {
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 3%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 10px;
+        opacity: 0.8;
+        width: 80%;
+    }
+
     .picture{
         width:191px;
         height: 318px;
+    }
+
+    .mainLogo img {
+        width: 80%;
     }
 
     .swal2-container.swal2-center>.swal2-popup {
@@ -49,7 +60,7 @@
         width: 250px !important;
     }
 
-    .fc fc-media-screen .fc-direction-ltr .fc-theme-standard {
+    .fc .fc-media-screen .fc-direction-ltr .fc-theme-standard {
         position: relative;
         padding-bottom: 56.25%;
         padding-top: 30px;
@@ -115,6 +126,34 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .fc-media-screen {
+        padding: 15px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        opacity: 0.8;
+        height: 750px !important;
+    }
+
+    .container3 .fc-media-screen {
+        height: auto !important;
+        margin-bottom: 20px;
+        height: 800px !important;
+    }
+
+    .fc-daygrid-event {
+        min-height: 10px !important;
+        max-height: 40px;
+    }
+    
+    .fc-daygrid-event {
+        align-items: unset !important;
+        white-space: nowrap !important;
+    }
+
     
   }
 

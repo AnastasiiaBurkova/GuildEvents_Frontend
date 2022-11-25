@@ -12,6 +12,14 @@ h1{
     left: 50%;
     transform: translate(-50%);
     margin-top: 10px;
+    font-size: large;
+}
+
+.viewButtons nav:hover{
+  border-style: solid;
+  border-radius: 4px;
+  border-color: white;
+  border-width: 0.25px;
 }
 
 /* The dropdown container */
@@ -42,6 +50,7 @@ h1{
     text-align: center;
     margin-right: 24px;
     margin-top: 10px;
+    font-size: large;
   }
   
   /* Add a red background color to navbar links on hover */
@@ -84,12 +93,12 @@ h1{
   .arrow {
     border: solid white;
     border-width: 0 2px 2px 0;
-    display: inline-block;
     padding: 4px;
     margin-left:15px;
     margin-bottom: 7px;
     margin-top:7px;
     align-items: center;
+    float: right;
   }
 
   /* hide mobile version by default */
@@ -115,7 +124,10 @@ h1{
       margin-top: 10px;
       font-size: small;
       padding: auto;
-      float: left !important;
+  }
+
+  .viewButtons nav:hover{
+    border: hidden;
   }
 
   .sc-hLBbgP {
@@ -129,14 +141,23 @@ h1{
     margin-right: 38px !important;
     font-size: small;
   }
-  .dropdown .dropbtn {
+  .dropdown .arrow {
     visibility: hidden;
   }
 
-  .dropbtn .arrow {
-    visibility: initial;
+  .dropdown .dropbtn {
+    background-image: url("../../images/hamb.png") !important;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+
+    font-size: 0%;
   }
-  
+
+  .dropdown:hover .dropbtn {
+    background-color: unset !important;
+}
+
   }
 
   .down {

@@ -16,19 +16,19 @@ const Navbar = () => {
 		<Nav>
 				<NavLink to='/' >
 					<div className='mainLogo'>
-					<img src={logoMobile} alt="logo" class="mobile"></img>
-					<img src={logo} alt="logo" class="desktop"></img>
+					<img src={logoMobile} alt="logo" className="mobile"></img>
+					<img src={logo} alt="logo" className="desktop"></img>
 					</div>
 				</NavLink>
 				<div className='viewButtons'> 
 				<NavBtn >
-					<NavBtnLink to='/'>Day view</NavBtnLink>
+					<NavBtnLink to='/'>Day</NavBtnLink>
 				</NavBtn>
 				<NavBtn >
-					<NavBtnLink to='/week'>Week view</NavBtnLink>
+					<NavBtnLink to='/week'>Week</NavBtnLink>
 				</NavBtn>
 				<NavBtn >
-					<NavBtnLink to='/month'>Month view</NavBtnLink>
+					<NavBtnLink to='/month'>Month</NavBtnLink>
 				</NavBtn>
 				</div>
 					<div className="dropdown">
