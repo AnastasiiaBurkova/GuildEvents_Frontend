@@ -29,4 +29,4 @@ $ git push
 The frontend part: https://github.com/AnastasiiaBurkova/GuildEvents_Backend
 
 ## Project deployment 
-The project is deployed in Azure: https://whatsthehaps.azurewebsites.net/
+The project is deployed in Azure: https://app-events.azurewebsites.net/
