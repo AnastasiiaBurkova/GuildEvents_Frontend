@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Asap');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 .App {
   text-align: center;
-  font-family: 'Oswald';
-  background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E );
+  font-family: "Source Sans Pro",arial,helvetica,sans-serif;
+  background-image: linear-gradient(to bottom right, #30BF98, #557AAA);
   background-repeat: no-repeat;
   background-position: absolute;
   background-attachment: fixed;
@@ -12,7 +12,7 @@
 
 html,
 body {
-  background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E ) !important;
+  background-image: linear-gradient(to bottom right, #30BF98, #557AAA) !important;
   background-repeat:no-repeat;
   background-attachment: fixed;
 }
@@ -76,15 +76,12 @@ h1{
   margin-top: 10px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  opacity: 0.8;
-  
-  
+  color: rgba(0, 0, 0, 0.895);
+  opacity: 0.99;
 }
 
 .guild-name{
   font-size: 30px;
-  opacity: 1 !important;
 }
 
 .TIK{
@@ -277,9 +274,6 @@ h1{
   width: 90%;
 }
 
-button{
-  opacity: 1 !important;
-}
 
 [role=gridcell]{ 
   height: 100px !important;
@@ -302,7 +296,6 @@ button{
   background-color: #30BF98 !important;
 }
 .select__control{
-  opacity: 0.8;
 }
 
 .css-1rhbuit-multiValue{
@@ -311,9 +304,7 @@ button{
 .fc-event-main-frame{
   text-shadow: 1px 1px black;
 }
-.fc-event{
-  opacity: 1 !important;
-}
+
 
 
 
