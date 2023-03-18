@@ -4,8 +4,8 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
-import Swal from "sweetalert2";
 import Select from "react-select";
+import { EventPopup } from "../components/EventPopup/EventPopup";
 
 const Month = () => {
   const [error, setError] = React.useState(false);
@@ -26,6 +26,7 @@ const Month = () => {
     "FK",
   ];
   const [filtered, setFiltered] = React.useState([]);
+  const [openPopup, setOpenPopup] = React.useState({isOpen: false, item: null});
 
   const guildOptions = [
     { value: "AS", label: "AS" },
@@ -132,16 +133,16 @@ const Month = () => {
   return (
     <div className="container3">
       <div className="selectDiv">
-      <Select
-        menuPlacement="auto"
-        menuPosition="fixed"
-        isMulti
-        name="colors"
-        options={guildOptions}
-        className="basic-multi-select"
-        classNamePrefix="select"
-        onChange={handleChange}
-      />
+        <Select
+          menuPlacement="auto"
+          menuPosition="fixed"
+          isMulti
+          name="colors"
+          options={guildOptions}
+          className="basic-multi-select"
+          classNamePrefix="select"
+          onChange={handleChange}
+        />
       </div>
       <FullCalendar
         plugins={[
@@ -164,19 +165,13 @@ const Month = () => {
         eventDisplay={"block"}
         dayMaxEvents={4}
         nowIndicator={true}
-        eventClick={(e) => {
-          Swal.fire({
-            title: e.event.title,
-            html:"Starting from: " + e.event.start +
-            "<br>Description: <span style='white-space: pre-line'>" + e.event.extendedProps.description?.replaceAll("** ", "</b> ")?.replaceAll("**", " <b>") + "</span> \n"+ 
-            "<br>Location: " + e.event.extendedProps.location + "</br>"+
-            "Organizer: " + e.event.extendedProps.guild
-        });
-        }}
+        eventClick={(e) => setOpenPopup({isOpen:true, item: e})}
         timeZone="Europe/Helsinki"
       />
+      <EventPopup openPopup={openPopup} setOpenPopup={setOpenPopup} />
     </div>
   );
 };
 
 export default Month;
+
