@@ -261,16 +261,13 @@ h1{
   width: 40% !important;
   background-color:rgb(255, 255, 255);
   color:rgb(0, 0, 0);
-  font-family: 'Oswald' !important;
   
 }
 .swal2-popup button{
   background-color: rgb(65 194 157) !important;
-  font-family: 'Oswald' !important;
 }
 .swal-text, .swal-title{
   color:rgb(0, 0, 0);
-  font-family: 'Oswald';
   width: 90%;
 }
 
