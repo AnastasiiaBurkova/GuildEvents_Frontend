@@ -9,23 +9,18 @@ import Week from './pages/week';
 import Month from './pages/month';
 
 function App() {
-
   return (
-    
     <div className="App">
-
       <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' exact element={<Home />} />
-        <Route path='/week' exact element={<Week />} />
-        <Route path='/month' exact element={<Month />}/> 
-        <Route path='/about' exact element={<About />} />
-        <Route path='/terms' exact element={<Terms />}/> 
-      </Routes>
-    </Router>
-
-      
+        <Navbar />
+        <Routes>
+          <Route path='/' exact element={<Home />} />
+          <Route path='/week' exact element={<Week />} />
+          <Route path='/month' exact element={<Month />} />
+          <Route path='/about' exact element={<About />} />
+          <Route path='/terms' exact element={<Terms />} />
+        </Routes>
+      </Router>
     </div>
   );
 
