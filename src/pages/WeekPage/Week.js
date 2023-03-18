@@ -4,9 +4,9 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
-import "../components/Navbar/NavStyles.css";
-import Swal from "sweetalert2";
 import Select from "react-select";
+import { Grid } from '@mui/material';
+import { EventPopup } from "../../components/EventPopup/EventPopup";
 
 const Week = () => {
   const [error, setError] = React.useState(false);
@@ -27,6 +27,7 @@ const Week = () => {
     "FK",
   ];
   const [filtered, setFiltered] = React.useState([]);
+  const [openPopup, setOpenPopup] = React.useState({ isOpen: false, item: null });
 
   const guildOptions = [
     { value: "AS", label: "AS" },
@@ -121,8 +122,8 @@ const Week = () => {
   };
 
   return (
-    <div className="container2">
-      <div className="selectDiv">
+    <Grid className="container2">
+      <Grid className="selectDiv">
       <Select
         menuPlacement="auto"
         menuPosition="fixed"
@@ -133,7 +134,7 @@ const Week = () => {
         classNamePrefix="select"
         onChange={handleChange}
       />
-      </div>
+      </Grid>
       <FullCalendar
         headerToolbar={{ start: "title", end: "today prev,next" }}
         plugins={[
@@ -162,18 +163,11 @@ const Week = () => {
         events={filtered}
         eventDisplay={"block"}
         nowIndicator={true}
-        eventClick={(e) => {
-          Swal.fire({
-            title: e.event.title,
-            html:"Starting from: " + e.event.start +
-            "<br>Description: <span style='white-space: pre-line'>" + e.event.extendedProps.description?.replaceAll("** ", "</b> ")?.replaceAll("**", " <b>") + "</span> \n"+ 
-            "<br>Location: " + e.event.extendedProps.location + "</br>"+
-            "Organizer: " + e.event.extendedProps.guild
-        });
-        }}
+        eventClick={(e) => setOpenPopup({ isOpen: true, item: e })}
         timeZone="Europe/Helsinki"
       />
-    </div>
+      <EventPopup openPopup={openPopup} setOpenPopup={setOpenPopup} />
+    </Grid>
   );
 };
 

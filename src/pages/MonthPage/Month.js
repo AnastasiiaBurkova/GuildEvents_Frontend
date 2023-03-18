@@ -5,7 +5,8 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
 import Select from "react-select";
-import { EventPopup } from "../components/EventPopup/EventPopup";
+import { Grid } from '@mui/material';
+import { EventPopup } from "../../components/EventPopup/EventPopup";
 
 const Month = () => {
   const [error, setError] = React.useState(false);
@@ -26,7 +27,7 @@ const Month = () => {
     "FK",
   ];
   const [filtered, setFiltered] = React.useState([]);
-  const [openPopup, setOpenPopup] = React.useState({isOpen: false, item: null});
+  const [openPopup, setOpenPopup] = React.useState({ isOpen: false, item: null });
 
   const guildOptions = [
     { value: "AS", label: "AS" },
@@ -131,8 +132,8 @@ const Month = () => {
   };
 
   return (
-    <div className="container3">
-      <div className="selectDiv">
+    <Grid className="container3">
+      <Grid className="selectDiv">
         <Select
           menuPlacement="auto"
           menuPosition="fixed"
@@ -143,7 +144,7 @@ const Month = () => {
           classNamePrefix="select"
           onChange={handleChange}
         />
-      </div>
+      </Grid>
       <FullCalendar
         plugins={[
           dayGridPlugin,
@@ -165,11 +166,11 @@ const Month = () => {
         eventDisplay={"block"}
         dayMaxEvents={4}
         nowIndicator={true}
-        eventClick={(e) => setOpenPopup({isOpen:true, item: e})}
+        eventClick={(e) => setOpenPopup({ isOpen: true, item: e })}
         timeZone="Europe/Helsinki"
       />
       <EventPopup openPopup={openPopup} setOpenPopup={setOpenPopup} />
-    </div>
+    </Grid>
   );
 };
 
