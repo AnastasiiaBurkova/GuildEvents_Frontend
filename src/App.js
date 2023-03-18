@@ -2,11 +2,11 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './pages/about';
-import Terms from './pages/terms';
-import Home from './pages/home';
-import Week from './pages/week';
-import Month from './pages/month';
+import About from './pages/AboutUsPage/About';
+import Terms from './pages/TermsPage/Terms';
+import Home from './pages/DayPage/Home';
+import Week from './pages/WeekPage/Week';
+import Month from './pages/MonthPage/Month';
 
 function App() {
   return (

@@ -2,60 +2,12 @@
 .fc-daygrid-event{
     cursor: pointer;
 }
-.aboutDiv, .termsDiv{
-    background-color: white;
-    border-radius: 10px;
-    margin-top: 3%;
-    width: 50%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.multiline{
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    width:60%;
-}
-
-.picture{
-    width:250px;
-    height: 420px;
-}
-
-.sik {
-    font-size: small;
-}
 
 
 @media (max-width: 600px) {
-    .aboutDiv, .termsDiv {
-        background-color: white;
-        border-radius: 10px;
-        margin-top: 3%;
-        margin-right: auto;
-        margin-left: auto;
-        padding: 10px;
-        width: 80%;
-    }
-
-    .picture{
-        width:191px;
-        height: 318px;
-    }
 
     .mainLogo img {
         width: 80%;
-    }
-
-    .swal2-container.swal2-center>.swal2-popup {
-        grid-column: 2;
-        grid-row: 2;
-        align-self: center;
-        justify-self: center;
-        width: 250px !important;
     }
 
     .fc .fc-media-screen .fc-direction-ltr .fc-theme-standard {
