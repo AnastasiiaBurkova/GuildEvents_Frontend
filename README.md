@@ -1,4 +1,4 @@
-# GuildEvents_Backend
+# GuildEvents_Frontend
 ## Basic information about the product
 - [General information](#general-information)
 - [Build and deploy the project frontend](#build-and-deploy-the-project-frontend)
