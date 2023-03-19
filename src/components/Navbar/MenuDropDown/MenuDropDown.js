@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link } from "react-router-dom";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { MenuDropDownStyle } from './MenuDropDownStyle';
+import { Grid } from '@mui/material';
 
 export default function MenuDropDown() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -17,7 +18,7 @@ export default function MenuDropDown() {
   };
 
   return (
-    <div>
+    <Grid container>
       <Button
         sx={MenuDropDownStyle}
         id="demo-positioned-button"
@@ -26,7 +27,6 @@ export default function MenuDropDown() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
-        
       >
         Menu
       </Button>
@@ -48,6 +48,6 @@ export default function MenuDropDown() {
         <MenuItem onClick={handleClose} component={Link} to='/about'>About us</MenuItem>
         <MenuItem onClick={handleClose} component={Link} to='/terms'>Terms and Conditions</MenuItem>
       </Menu>
-    </div>
+    </Grid>
   );
 }

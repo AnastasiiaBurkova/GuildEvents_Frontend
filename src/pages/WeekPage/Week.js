@@ -5,27 +5,15 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
 import Select from "react-select";
+import { guilds } from '../../data/Guilds';
 import { Grid } from '@mui/material';
 import { EventPopup } from "../../components/EventPopup/EventPopup";
+import NavBar from "../../components/NavBar/NavBar";
+import '../pages.css';
 
 const Week = () => {
   const [error, setError] = React.useState(false);
   const [response, setResponse] = React.useState([]);
-  const guilds = [
-    "AK",
-    "AS",
-    "Athene",
-    "IK",
-    "Inkubio",
-    "KIK",
-    "MK",
-    "PJK",
-    "PT",
-    "TIK",
-    "TF",
-    "Prodeko",
-    "FK",
-  ];
   const [filtered, setFiltered] = React.useState([]);
   const [openPopup, setOpenPopup] = React.useState({ isOpen: false, item: null });
 
@@ -48,7 +36,7 @@ const Week = () => {
   const guildQuery = guilds.map((g) => `guildNames=${g}`).join("&");
   const startDateTimeQuery = `startDateTimeFrame=${get10DaysFromNowEvents()}`;
   const endDateTimeQuery = `endDateTimeFrame=${getNext4MonthsEvents()}`;
-  async function fetchData(guilds) {
+  async function fetchData() {
     try {
       await Promise.all([
         await fetch(
@@ -77,7 +65,7 @@ const Week = () => {
   }
 
   React.useEffect(() => {
-    fetchData(guilds);
+    fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -122,7 +110,8 @@ const Week = () => {
   };
 
   return (
-    <Grid className="container2">
+    <Grid>
+      <NavBar />
       <Grid className="selectDiv">
       <Select
         menuPlacement="auto"

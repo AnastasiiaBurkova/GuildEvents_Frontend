@@ -1,49 +1,41 @@
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import MenuDropDown from './MenuDropDown/MenuDropDown';
+import logo from "../../images/main-logo.png";
+import logoMobile from "../../images/main-logo-mobile.png";
+import { Link } from "react-router-dom";
+import { Grid, Button, Stack } from '@mui/material';
+import './NavStyles.css'
 
-import { NavLink as Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-export const Nav = styled.nav`
-height: 60px;
-display: flex;
-color:white;
-justify-content: space-between;
-`;
-
-export const NavLink = styled(Link)`
-color: white;
-display: flex;
-align-items: center;
-text-decoration: none;
-padding: 0 1rem;
-height: 100%;
-cursor: pointer;
-&.active {
-	color: #000000;
+export default function NavBar() {
+	return (
+		<Box >
+			<AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+				<Toolbar>
+					<Grid container direction={'row'}>
+						<Grid item xs={1}>
+							<Link to="/">
+								<Box className='mainLogo'>
+									<Box component="img" height={64} src={logoMobile} alt="logo" className="mobile" />
+									<Box component="img" height={64} src={logo} alt="logo" className="desktop" />
+								</Box>
+							</Link>
+						</Grid>
+						<Grid item xs={10} mt={2}>
+							<Stack direction="row" sx={{ justifyContent: 'center' }} spacing={{ sm: 2, lg: 9 }}>
+								<Button variant="text" component={Link} to={'/'} sx={{ color: 'white' }}>Day</Button>
+								<Button variant="text" component={Link} to={'/week'} sx={{ color: 'white' }}>Week</Button>
+								<Button variant="text" component={Link} to={'/month'} sx={{ color: 'white' }}>Month</Button>
+							</Stack>
+						</Grid>
+						<Grid item xs={1} mt={2}>
+							<MenuDropDown />
+						</Grid>
+					</Grid>
+				</Toolbar>
+			</AppBar>
+		</Box>
+	);
 }
-`;
-
-
-export const NavMenu = styled.div`
-display: flex;
-`;
-
-export const NavBtn = styled.nav`
-display: flex;
-align-items: center;
-margin-right: 24px;
-
-`;
-
-export const NavBtnLink = styled(Link)`
-border-radius: 4px;
-padding: 10px 22px;
-color: white;
-outline: none;
-border: none;
-cursor: pointer;
-transition: all 0.2s ease-in-out;
-text-decoration: none;
-
-`;
-
-/*background: #CF9FFF;*/

@@ -6,26 +6,13 @@ import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
 import Select from "react-select";
 import { Grid } from '@mui/material';
+import { guilds } from '../../data/Guilds';
 import { EventPopup } from "../../components/EventPopup/EventPopup";
+import NavBar from "../../components/NavBar/NavBar";
 
 const Month = () => {
   const [error, setError] = React.useState(false);
   const [response, setResponse] = React.useState([]);
-  const guilds = [
-    "AK",
-    "AS",
-    "Athene",
-    "IK",
-    "Inkubio",
-    "KIK",
-    "MK",
-    "PJK",
-    "PT",
-    "TIK",
-    "TF",
-    "Prodeko",
-    "FK",
-  ];
   const [filtered, setFiltered] = React.useState([]);
   const [openPopup, setOpenPopup] = React.useState({ isOpen: false, item: null });
 
@@ -132,7 +119,8 @@ const Month = () => {
   };
 
   return (
-    <Grid className="container3">
+    <Grid justifyContent={'center'}>
+       <NavBar />
       <Grid className="selectDiv">
         <Select
           menuPlacement="auto"

@@ -10,16 +10,6 @@
         width: 80%;
     }
 
-    .fc .fc-media-screen .fc-direction-ltr .fc-theme-standard {
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
-        overflow: scroll;
-        width: 100%;
-        min-width: 354px;
-        height: 750px !important;
-    }
-
     .fc-timegrid-event-harness {
         width: 60px;
         height: 75px;
@@ -86,12 +76,6 @@
         color: rgb(0, 0, 0);
         opacity: 0.99;
         height: 750px !important;
-    }
-
-    .container3 .fc-media-screen {
-        height: auto !important;
-        margin-bottom: 20px;
-        height: 800px !important;
     }
 
     .fc-daygrid-event {
