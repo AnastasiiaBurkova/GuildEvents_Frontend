@@ -15,7 +15,7 @@ export default function NavBar() {
 			<AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
 				<Toolbar>
 					<Grid container direction={'row'}>
-						<Grid item xs={1}>
+						<Grid item xs={2}>
 							<Link to="/">
 								<Box className='mainLogo'>
 									<Box component="img" height={64} src={logoMobile} alt="logo" className="mobile" />
@@ -23,7 +23,7 @@ export default function NavBar() {
 								</Box>
 							</Link>
 						</Grid>
-						<Grid item xs={10} mt={2}>
+						<Grid item xs={9} mt={2} justifyContent={'center'}>
 							<Stack direction="row" sx={{ justifyContent: 'center' }} spacing={{ sm: 2, lg: 9 }}>
 								<Button variant="text" component={Link} to={'/'} sx={{ color: 'white' }}>Day</Button>
 								<Button variant="text" component={Link} to={'/week'} sx={{ color: 'white' }}>Week</Button>

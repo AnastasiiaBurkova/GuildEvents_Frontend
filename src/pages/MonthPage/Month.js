@@ -4,11 +4,11 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
-import Select from "react-select";
 import { Grid } from '@mui/material';
 import { guilds } from '../../data/Guilds';
 import { EventPopup } from "../../components/EventPopup/EventPopup";
 import NavBar from "../../components/NavBar/NavBar";
+import { SearchBar } from "../../components/SearchBar/SearchBar";
 
 const Month = () => {
   const [error, setError] = React.useState(false);
@@ -106,32 +106,13 @@ const Month = () => {
     return <h1> Oops.. something went wrong! </h1>;
   }
 
-  const handleChange = (values) => {
-    var filteredEvents = [];
-    var applied = [];
-    for (let i in values) {
-      filteredEvents = response.filter(
-        (value) => value.guild === values[i].value
-      );
-      applied = [...applied, ...filteredEvents];
-    }
-    setFiltered(applied);
-  };
-
   return (
     <Grid justifyContent={'center'}>
-       <NavBar />
-      <Grid className="selectDiv">
-        <Select
-          menuPlacement="auto"
-          menuPosition="fixed"
-          isMulti
-          name="colors"
-          options={guildOptions}
-          className="basic-multi-select"
-          classNamePrefix="select"
-          onChange={handleChange}
-        />
+      <NavBar />
+      <Grid container direction={'row'} justifyContent={'end'}>
+        <Grid item sx={{ minWidth: '40vh', m: 0.5 }}>
+          <SearchBar guildOptions={guildOptions} setFiltered={setFiltered} response={response} />
+        </Grid>
       </Grid>
       <FullCalendar
         plugins={[

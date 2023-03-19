@@ -68,7 +68,7 @@ const Home = () => {
       <NavBar />
       <Grid container justifyContent={'center'} spacing={2}>
         {response.length > 0 && response.map((list) => (
-          <Grid item lg={4} sm={12} md={6} justifyContent={'center'}>
+          <Grid item lg={4} sm={12} md={6} justifyContent={'center'} key={Object.keys(list)[0]}>
             <FullCalendar
               plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, momentTimezonePlugin]}
               initialView="timeGridDay"

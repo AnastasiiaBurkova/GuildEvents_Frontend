@@ -1,7 +1,4 @@
 
-.fc-daygrid-event{
-    cursor: pointer;
-}
 
 
 @media (max-width: 600px) {
@@ -58,13 +55,6 @@
         right: 0;
         vertical-align: top;
         font-size: x-small;
-    }
-
-    .selectDiv {
-        max-width: 60%;
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .fc-media-screen {
