@@ -122,6 +122,7 @@ const Month = () => {
           momentTimezonePlugin,
         ]}
         initialView="dayGridMonth"
+        buttonText={{today:"TODAY"}}
         displayEventTime={false}
         firstDay={1}
         validRange={{

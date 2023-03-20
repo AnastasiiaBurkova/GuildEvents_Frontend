@@ -73,6 +73,7 @@ const Home = () => {
               plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, momentTimezonePlugin]}
               initialView="timeGridDay"
               contentHeight={"auto"}
+              buttonText={{today:"TODAY"}}
               validRange={{
                 start: new Date(),
                 end: getNext4MonthsEvents()

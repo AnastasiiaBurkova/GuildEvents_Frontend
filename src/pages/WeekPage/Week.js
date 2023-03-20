@@ -107,6 +107,7 @@ const Week = () => {
       </Grid>
       <FullCalendar
         headerToolbar={{ start: "title", end: "today prev,next" }}
+        buttonText={{today:"TODAY"}}
         plugins={[
           dayGridPlugin,
           timeGridPlugin,
