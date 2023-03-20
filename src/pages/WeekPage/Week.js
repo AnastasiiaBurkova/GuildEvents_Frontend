@@ -8,7 +8,7 @@ import { guilds } from '../../data/Guilds';
 import { Grid } from '@mui/material';
 import { SearchBar } from "../../components/SearchBar/SearchBar";
 import { EventPopup } from "../../components/EventPopup/EventPopup";
-import NavBar from "../../components/NavBar/NavBar";
+import Navbar from "../../components/Navbar/Navbar";
 import '../pages.css';
 
 const Week = () => {
@@ -99,7 +99,7 @@ const Week = () => {
 
   return (
     <Grid>
-      <NavBar />
+      <Navbar />
       <Grid container direction={'row'} justifyContent={'end'}>
         <Grid item sx={{ minWidth: '40vh', m: 0.5 }}>
           <SearchBar guildOptions={guildOptions} setFiltered={setFiltered} response={response} />

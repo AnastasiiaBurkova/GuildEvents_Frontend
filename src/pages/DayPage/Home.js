@@ -6,7 +6,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 import { Grid } from '@mui/material';
 import { EventPopup } from "../../components/EventPopup/EventPopup";
-import NavBar from "../../components/NavBar/NavBar";
+import Navbar from "../../components/Navbar/Navbar";
 import { guilds } from '../../data/Guilds';
 
 const Home = () => {
@@ -65,7 +65,7 @@ const Home = () => {
 
   return (
     <Grid>
-      <NavBar />
+      <Navbar />
       <Grid container justifyContent={'center'} spacing={2}>
         {response.length > 0 && response.map((list) => (
           <Grid item lg={4} sm={12} md={6} justifyContent={'center'} key={Object.keys(list)[0]}>
