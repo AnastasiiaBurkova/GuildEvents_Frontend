@@ -6,6 +6,8 @@ import interactionPlugin from '@fullcalendar/interaction';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 import { Grid } from '@mui/material';
 import { EventPopup } from "../../components/EventPopup/EventPopup";
+import NavBar from "../../components/NavBar/NavBar";
+import { guilds } from '../../data/Guilds';
 
 const Home = () => {
 
@@ -19,7 +21,6 @@ const Home = () => {
     date.setSeconds(0);
     date.setMilliseconds(0);
     try {
-      const guilds = ['AK', 'AS', 'Athene', 'IK', 'Inkubio', 'KIK', 'MK', 'PJK', 'PT', 'TIK', 'TF', 'Prodeko', 'FK'];
       const guildQuery = guilds.map(g => `guildNames=${g}`).join('&');
       const startDateTimeQuery = `startDateTimeFrame=${date.toISOString()}`;
       const endDateTimeQuery = `endDateTimeFrame=${getNext4MonthsEvents()}`;
@@ -63,30 +64,35 @@ const Home = () => {
   }
 
   return (
-    <Grid className='container'>
-      {response.length > 0 && response.map((list) => (
-        <FullCalendar
-          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, momentTimezonePlugin]}
-          initialView="timeGridDay"
-          contentHeight={"auto"}
-          validRange={{
-            start: new Date(),
-            end: getNext4MonthsEvents()
-          }}
-          eventTimeFormat={{ hour: '2-digit', minute: '2-digit', hour12: false }}
-          dayHeaderContent={Object.keys(list)[0]}
-          dayHeaderClassNames={"guild-name " + Object.keys(list)[0]}
-          slotMinTime={"08:00:00"}
-          slotMaxTime={"24:00:00"}
-          key={Object.keys(list)[0]}
-          events={Object.values(list)[0]}
-          eventColor={list.color}
-          nowIndicator
-          eventClick={(e) => setOpenPopup({ isOpen: true, item: e })}
-          timeZone="Europe/Helsinki"
-        />
-      ))}
-      <EventPopup openPopup={openPopup} setOpenPopup={setOpenPopup} />
+    <Grid>
+      <NavBar />
+      <Grid container justifyContent={'center'} spacing={2}>
+        {response.length > 0 && response.map((list) => (
+          <Grid item lg={4} sm={12} md={6} justifyContent={'center'} key={Object.keys(list)[0]}>
+            <FullCalendar
+              plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, momentTimezonePlugin]}
+              initialView="timeGridDay"
+              contentHeight={"auto"}
+              validRange={{
+                start: new Date(),
+                end: getNext4MonthsEvents()
+              }}
+              eventTimeFormat={{ hour: '2-digit', minute: '2-digit', hour12: false }}
+              dayHeaderContent={Object.keys(list)[0]}
+              dayHeaderClassNames={"guild-name " + Object.keys(list)[0]}
+              slotMinTime={"08:00:00"}
+              slotMaxTime={"24:00:00"}
+              key={Object.keys(list)[0]}
+              events={Object.values(list)[0]}
+              eventColor={list.color}
+              nowIndicator
+              eventClick={(e) => setOpenPopup({ isOpen: true, item: e })}
+              timeZone="Europe/Helsinki"
+            />
+          </Grid>
+        ))}
+        <EventPopup openPopup={openPopup} setOpenPopup={setOpenPopup} />
+      </Grid>
     </Grid>
   );
 };
