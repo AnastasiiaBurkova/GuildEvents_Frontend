@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cdedca42.css",
-    "main.js": "/static/js/main.3534b5c6.js",
+    "main.css": "/static/css/main.ded7ef8a.css",
+    "main.js": "/static/js/main.a998eefc.js",
     "static/js/787.dd6ac539.chunk.js": "/static/js/787.dd6ac539.chunk.js",
     "static/media/Noora_Anastasiia.jpeg": "/static/media/Noora_Anastasiia.dd216cd7b2bde264c6bb.jpeg",
     "static/media/IK_logo.png": "/static/media/IK_logo.683cda5e16ffee940eb1.png",
@@ -16,15 +16,14 @@
     "static/media/prodeko-logo.png": "/static/media/prodeko-logo.2f9849544c52a3c02d3e.png",
     "static/media/logo_green.png": "/static/media/logo_green.cc1f5a3e5836f986cbee.png",
     "static/media/main-logo.png": "/static/media/main-logo.31ad1edb2f66005c7a99.png",
-    "static/media/hamb.png": "/static/media/hamb.3f294f54a08c1792be25.png",
     "static/media/as-black.jpg": "/static/media/as-black.89e1c543be80eadf1366.jpg",
     "index.html": "/index.html",
-    "main.cdedca42.css.map": "/static/css/main.cdedca42.css.map",
-    "main.3534b5c6.js.map": "/static/js/main.3534b5c6.js.map",
+    "main.ded7ef8a.css.map": "/static/css/main.ded7ef8a.css.map",
+    "main.a998eefc.js.map": "/static/js/main.a998eefc.js.map",
     "787.dd6ac539.chunk.js.map": "/static/js/787.dd6ac539.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdedca42.css",
-    "static/js/main.3534b5c6.js"
+    "static/css/main.ded7ef8a.css",
+    "static/js/main.a998eefc.js"
   ]
 }

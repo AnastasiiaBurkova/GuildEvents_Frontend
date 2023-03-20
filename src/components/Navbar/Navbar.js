@@ -23,14 +23,14 @@ export default function Navbar() {
 								</Box>
 							</Link>
 						</Grid>
-						<Grid item xs={9} mt={2} justifyContent={'center'}>
+						<Grid item xs={8} mt={2} justifyContent={'center'}>
 							<Stack direction="row" sx={{ justifyContent: 'center' }} spacing={{ sm: 2, lg: 9 }}>
 								<Button variant="text" component={Link} to={'/'} sx={{ color: 'white' }}>Day</Button>
 								<Button variant="text" component={Link} to={'/week'} sx={{ color: 'white' }}>Week</Button>
 								<Button variant="text" component={Link} to={'/month'} sx={{ color: 'white' }}>Month</Button>
 							</Stack>
 						</Grid>
-						<Grid item xs={1} mt={2}>
+						<Grid item xs={2} mt={2}>
 							<MenuDropDown />
 						</Grid>
 					</Grid>
