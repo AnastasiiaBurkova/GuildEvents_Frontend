@@ -1,13 +1,13 @@
 import React from 'react';
 import { Typography, Box, Grid } from '@mui/material';
 import { TermsStyle } from './TermsStyle';
-import NavBar from '../../components/NavBar/NavBar';
+import Navbar from '../../components/Navbar/Navbar';
 
 const Terms = () => {
         return (
                 <Grid container direction={'column'}>
                         <Grid item>
-                                <NavBar />
+                                <Navbar />
                         </Grid>
                         <Grid item>
                                 <Box sx={TermsStyle}>

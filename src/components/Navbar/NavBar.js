@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { Grid, Button, Stack } from '@mui/material';
 import './NavStyles.css'
 
-export default function NavBar() {
+export default function Navbar() {
 	return (
 		<Box >
 			<AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>

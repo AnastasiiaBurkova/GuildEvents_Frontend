@@ -3,13 +3,13 @@ import logo from "../../images/logo_green.png";
 import us from "../../images/Noora_Anastasiia.jpeg"
 import { Typography, Grid, Box } from '@mui/material';
 import { AboutUsStyle } from './AboutStyle';
-import NavBar from '../../components/NavBar/NavBar';
+import Navbar from '../../components/Navbar/Navbar';
 
 const About = () => {
         return (
                 <Grid container direction={'column'}>
                         <Grid item>
-                                <NavBar />
+                                <Navbar />
                         </Grid>
                         <Grid item sx={AboutUsStyle}>
                                 <Typography variant='h4' m={2} >About us</Typography>

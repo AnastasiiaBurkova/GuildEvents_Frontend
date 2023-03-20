@@ -7,7 +7,7 @@ import momentTimezonePlugin from "@fullcalendar/moment-timezone";
 import { Grid } from '@mui/material';
 import { guilds } from '../../data/Guilds';
 import { EventPopup } from "../../components/EventPopup/EventPopup";
-import NavBar from "../../components/NavBar/NavBar";
+import Navbar from "../../components/Navbar/Navbar";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
 
 const Month = () => {
@@ -108,7 +108,7 @@ const Month = () => {
 
   return (
     <Grid justifyContent={'center'}>
-      <NavBar />
+      <Navbar />
       <Grid container direction={'row'} justifyContent={'end'}>
         <Grid item sx={{ minWidth: '40vh', m: 0.5 }}>
           <SearchBar guildOptions={guildOptions} setFiltered={setFiltered} response={response} />
