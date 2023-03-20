@@ -1,11 +1,11 @@
 const TermsStyle = {
     bgcolor: 'background.paper',
-    borderRadius: 10,
+    borderRadius: 5,
     mt: 3,
-    width: '60vh',
     p: 10,
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    maxWidth: 'md'
 }
 
 
