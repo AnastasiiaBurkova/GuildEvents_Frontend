@@ -2,16 +2,16 @@ import React from 'react';
 import logo from "../../images/logo_green.png";
 import us from "../../images/Noora_Anastasiia.jpeg"
 import { Typography, Grid, Box } from '@mui/material';
-import { AboutUsStyle } from './AboutStyle';
+import { AboutUsStyle, AboutUsLogoStyle, AboutUsCreatorsImageStyle } from './AboutStyle';
 import Navbar from '../../components/Navbar/Navbar';
 
 const About = () => {
         return (
-                <Grid container direction={'column'}>
-                        <Grid item>
+                <Grid>
+                        <Grid>
                                 <Navbar />
                         </Grid>
-                        <Grid item sx={AboutUsStyle}>
+                        <Box sx={AboutUsStyle}>
                                 <Typography variant='h4' m={2} >About us</Typography>
                                 <Typography m={2} variant={'body1'}>
                                         Hello! We are Anastasiia and Noora. We started our studies at Aalto University in 2021.
@@ -25,7 +25,7 @@ const About = () => {
                                 <Typography m={2} fontWeight={'bold'} variant={'body1'}>
                                         So we came up with
                                 </Typography>
-                                <Box component={'img'} src={logo} alt="logo"></Box>
+                                <Box component={'img'} sx={AboutUsLogoStyle} src={logo} alt="logo"></Box>
                                 <Typography variant={'body1'} m={2} >
                                         WhatsTheHaps? is a web service that combines the calendars of
                                         all Aalto guilds and shows a clear weekly
@@ -41,13 +41,13 @@ const About = () => {
                                         Software and Service engineering, TIK. Hope you'll enjoy this website.
                                 </Typography>
                                 <Grid container justifyContent={'center'}>
-                                        <Box component={'img'} sx={{ width: '40vh', height: '60vh' }} src={us} alt="Noora and Anastasiia"></Box>
+                                        <Box component={'img'} sx={AboutUsCreatorsImageStyle} src={us} alt="Noora and Anastasiia"></Box>
                                 </Grid>
                                 <Typography m={2} mt={4} variant={'body2'}>
                                         P.S. If you are an Electrical Engineering Student (SIK), we are sorry, there are no events of your guild for you here!
                                         You still wanna see your events? Ask your guild officials to finally make the google calendar. You are the only guild without one :(
                                 </Typography>
-                        </Grid>
+                        </Box>
                 </Grid>
         );
 };
