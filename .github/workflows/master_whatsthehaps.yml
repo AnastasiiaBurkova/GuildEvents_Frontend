@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - whatsthehaps
 on:
   push:
     branches:
-      - none
+      - master
   workflow_dispatch:
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./build
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'whatsthehaps'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F96B7A255AC74ADF9DB29D791670303E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_134CCB46B4E24636B9BC9A4E96810771 }}
           package: .
